@@ -1,0 +1,57 @@
+[submodule "/home/lyj/.emacs.d/lisp/extensions/yasnippet"]
+	path = /home/lyj/.emacs.d/lisp/extensions/yasnippet
+	url = git@github.com:joaotavora/yasnippet.git
+[submodule "/home/lyj/.emacs.d/lisp/extensions/lsp-bridge"]
+	path = /home/lyj/.emacs.d/lisp/extensions/lsp-bridge
+	url = git@github.com:manateelazycat/lsp-bridge.git
+[submodule "/home/lyj/.emacs.d/lisp/extensions/go-mode"]
+	path = /home/lyj/.emacs.d/lisp/extensions/go-mode
+	url = git@github.com:dominikh/go-mode.el.git
+[submodule "/home/lyj/.emacs.d/lisp/extensions/markdown-mode"]
+	path = /home/lyj/.emacs.d/lisp/extensions/markdown-mode
+	url = git@github.com:jrblevin/markdown-mode.git
+[submodule "/home/lyj/.emacs.d/lisp/extensions/eldoc-extension"]
+	path = /home/lyj/.emacs.d/lisp/extensions/eldoc-extension
+	url = git@github.com:emacsmirror/eldoc-extension.git
+[submodule "/home/lyj/.emacs.d/lisp/extensions/ace-window"]
+	path = /home/lyj/.emacs.d/lisp/extensions/ace-window
+	url = git@github.com:abo-abo/ace-window.git
+[submodule "/home/lyj/.emacs.d/lisp/extensions/auto-save"]
+	path = /home/lyj/.emacs.d/lisp/extensions/auto-save
+	url = git@github.com:manateelazycat/auto-save.git
+[submodule "/home/lyj/.emacs.d/lisp/extensions/avy"]
+	path = /home/lyj/.emacs.d/lisp/extensions/avy
+	url = git@github.com:abo-abo/avy.git
+[submodule "/home/lyj/.emacs.d/lisp/extensions/compat"]
+	path = /home/lyj/.emacs.d/lisp/extensions/compat
+	url = git@github.com:emacs-compat/compat.git
+[submodule "/home/lyj/.emacs.d/lisp/extensions/awesome-tray"]
+	path = /home/lyj/.emacs.d/lisp/extensions/awesome-tray
+	url = git@github.com:manateelazycat/awesome-tray.git
+[submodule "/home/lyj/.emacs.d/lisp/extensions/sort-tab"]
+	path = /home/lyj/.emacs.d/lisp/extensions/sort-tab
+	url = git@github.com:manateelazycat/sort-tab.git
+[submodule "/home/lyj/.emacs.d/lisp/extensions/dired-hacks"]
+	path = /home/lyj/.emacs.d/lisp/extensions/dired-hacks
+	url = git@github.com:Fuco1/dired-hacks.git
+[submodule "/home/lyj/.emacs.d/lisp/extensions/dired-sidebar"]
+	path = /home/lyj/.emacs.d/lisp/extensions/dired-sidebar
+	url = git@github.com:jojojames/dired-sidebar.git
+[submodule "/home/lyj/.emacs.d/lisp/extensions/projectile"]
+	path = /home/lyj/.emacs.d/lisp/extensions/projectile
+	url = git@github.com:bbatsov/projectile.git
+[submodule "/home/lyj/.emacs.d/lisp/extensions/emacs-dashboard"]
+	path = /home/lyj/.emacs.d/lisp/extensions/emacs-dashboard
+	url = git@github.com:emacs-dashboard/emacs-dashboard.git
+[submodule "/home/lyj/.emacs.d/lisp/extensions/ws-butler"]
+	path = /home/lyj/.emacs.d/lisp/extensions/ws-butler
+	url = git@github.com:lewang/ws-butler.git
+[submodule "/home/lyj/.emacs.d/lisp/extensions/dash.el"]
+	path = /home/lyj/.emacs.d/lisp/extensions/dash.el
+	url = git@github.com:magnars/dash.el.git
+[submodule "/home/lyj/.emacs.d/lisp/extensions/emacs-material-theme"]
+	path = /home/lyj/.emacs.d/lisp/extensions/emacs-material-theme
+	url = git@github.com:cpaulik/emacs-material-theme.git
+[submodule "/home/lyj/.emacs.d/lisp/extensions/vscode-icon-emacs"]
+	path = /home/lyj/.emacs.d/lisp/extensions/vscode-icon-emacs
+	url = git@github.com:jojojames/vscode-icon-emacs.git
