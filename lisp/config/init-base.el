@@ -38,4 +38,9 @@
 ;; 编程模式下，可以折叠代码块
 (add-hook 'prog-mode-hook #'hs-minor-mode)
 
+; 设定启动图形界面时的初始 Frame 宽度（字符数）
+(add-to-list 'default-frame-alist '(width . 130)) 
+;; 设定启动图形界面时的初始 Frame 高度（字符数）
+(add-to-list 'default-frame-alist '(height . 35)) 
+
 (provide 'init-base)

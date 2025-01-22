@@ -33,16 +33,18 @@
 
 (add-subdirs-to-load-path "~/.emacs.d/lisp")
 
+(setq python-interpreter-path "~/environment/lsp-bridge-venv/bin/python3")
+
 (require 'init-base)
 (require 'init-auto-save)
 (require 'init-keymap)
+(require 'init-theme)
 (require 'init-sidebar)
 (require 'init-ace-window)
 (require 'init-awesome-tray)
 (require 'init-sort-tab)
 (require 'init-dashboard)
 (require 'init-projectile)
-(require 'init-theme)
 (require 'init-treesit)
 (require 'init-eldoc)
 (require 'init-lsp-bridge)

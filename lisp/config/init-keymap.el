@@ -1,6 +1,7 @@
 ;; 设置全选快捷键
 (global-set-key (kbd "s-a") 'mark-whole-buffer)
-
+;; 为选中的代码加注释/去注释
+(global-set-key (kbd "C-c '") 'comment-or-uncomment-region)
 ;; 设置打开和关闭dired-sidebar的快捷键
 (global-set-key (kbd "C-x e") 'dired-sidebar-toggle-sidebar)
 

@@ -1,6 +1,7 @@
 (require 'treesit)
 
 ;; 定义 Tree-sitter 支持的编程语言及其语法解析器的来源
+;; 使用M-x 执行`'treesit-language-source-alist`'命令，并输入对应的变成语言
 (setq treesit-language-source-alist
       '((bash . ("https://github.com/tree-sitter/tree-sitter-bash"))
         (c . ("https://github.com/tree-sitter/tree-sitter-c"))
@@ -29,19 +30,8 @@
         (vue . ("https://github.com/merico-dev/tree-sitter-vue"))
         (yaml . ("https://github.com/ikatyang/tree-sitter-yaml"))))
 
-(add-hook 'web-mode-hook #'(lambda ()
-                             (let ((file-name (buffer-file-name)))
-                               (when file-name
-                                 (treesit-parser-create
-                                  (pcase (file-name-extension file-name)
-                                    ("vue" 'vue)
-                                    ("html" 'html)
-                                    ("php" 'php))))
-                               )))
-
 ;; 在进入对应模式或文件时创建解析器
 (add-hook 'markdown-ts-mode-hook #'(lambda () (treesit-parser-create 'markdown)))
-(add-hook 'json-mode-hook #'(lambda () (treesit-parser-create 'json)))
 (add-hook 'go-mode-hook #'(lambda () (treesit-parser-create 'go)))
 
 (provide 'init-treesit)
