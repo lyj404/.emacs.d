@@ -1,54 +1,54 @@
-[submodule "/home/lyj/.emacs.d/lisp/extensions/yasnippet"]
-	path = /home/lyj/.emacs.d/lisp/extensions/yasnippet
-	url = git@github.com:joaotavora/yasnippet.git
-[submodule "/home/lyj/.emacs.d/lisp/extensions/lsp-bridge"]
-	path = /home/lyj/.emacs.d/lisp/extensions/lsp-bridge
-	url = git@github.com:manateelazycat/lsp-bridge.git
-[submodule "/home/lyj/.emacs.d/lisp/extensions/go-mode"]
-	path = /home/lyj/.emacs.d/lisp/extensions/go-mode
-	url = git@github.com:dominikh/go-mode.el.git
-[submodule "/home/lyj/.emacs.d/lisp/extensions/markdown-mode"]
-	path = /home/lyj/.emacs.d/lisp/extensions/markdown-mode
-	url = git@github.com:jrblevin/markdown-mode.git
-[submodule "/home/lyj/.emacs.d/lisp/extensions/eldoc-extension"]
-	path = /home/lyj/.emacs.d/lisp/extensions/eldoc-extension
-	url = git@github.com:emacsmirror/eldoc-extension.git
-[submodule "/home/lyj/.emacs.d/lisp/extensions/ace-window"]
-	path = /home/lyj/.emacs.d/lisp/extensions/ace-window
-	url = git@github.com:abo-abo/ace-window.git
-[submodule "/home/lyj/.emacs.d/lisp/extensions/auto-save"]
-	path = /home/lyj/.emacs.d/lisp/extensions/auto-save
-	url = git@github.com:manateelazycat/auto-save.git
-[submodule "/home/lyj/.emacs.d/lisp/extensions/avy"]
-	path = /home/lyj/.emacs.d/lisp/extensions/avy
-	url = git@github.com:abo-abo/avy.git
-[submodule "/home/lyj/.emacs.d/lisp/extensions/compat"]
-	path = /home/lyj/.emacs.d/lisp/extensions/compat
-	url = git@github.com:emacs-compat/compat.git
-[submodule "/home/lyj/.emacs.d/lisp/extensions/awesome-tray"]
-	path = /home/lyj/.emacs.d/lisp/extensions/awesome-tray
-	url = git@github.com:manateelazycat/awesome-tray.git
-[submodule "/home/lyj/.emacs.d/lisp/extensions/sort-tab"]
-	path = /home/lyj/.emacs.d/lisp/extensions/sort-tab
-	url = git@github.com:manateelazycat/sort-tab.git
-[submodule "/home/lyj/.emacs.d/lisp/extensions/dired-hacks"]
-	path = /home/lyj/.emacs.d/lisp/extensions/dired-hacks
-	url = git@github.com:Fuco1/dired-hacks.git
-[submodule "/home/lyj/.emacs.d/lisp/extensions/dired-sidebar"]
-	path = /home/lyj/.emacs.d/lisp/extensions/dired-sidebar
-	url = git@github.com:jojojames/dired-sidebar.git
-[submodule "/home/lyj/.emacs.d/lisp/extensions/projectile"]
-	path = /home/lyj/.emacs.d/lisp/extensions/projectile
-	url = git@github.com:bbatsov/projectile.git
-[submodule "/home/lyj/.emacs.d/lisp/extensions/emacs-dashboard"]
-	path = /home/lyj/.emacs.d/lisp/extensions/emacs-dashboard
-	url = git@github.com:emacs-dashboard/emacs-dashboard.git
-[submodule "/home/lyj/.emacs.d/lisp/extensions/ws-butler"]
-	path = /home/lyj/.emacs.d/lisp/extensions/ws-butler
-	url = git@github.com:lewang/ws-butler.git
-[submodule "/home/lyj/.emacs.d/lisp/extensions/dash.el"]
-	path = /home/lyj/.emacs.d/lisp/extensions/dash.el
-	url = git@github.com:magnars/dash.el.git
-[submodule "/home/lyj/.emacs.d/lisp/extensions/vscode-icon-emacs"]
-	path = /home/lyj/.emacs.d/lisp/extensions/vscode-icon-emacs
-	url = git@github.com:jojojames/vscode-icon-emacs.git
+[submodule "yasnippet"]
+    path = lisp/extensions/yasnippet
+    url = https://github.com/joaotavora/yasnippet.git
+[submodule "lsp-bridge"]
+    path = lisp/extensions/lsp-bridge
+    url = https://github.com/manateelazycat/lsp-bridge.git
+[submodule "go-mode"]
+    path = lisp/extensions/go-mode
+    url = https://github.com/dominikh/go-mode.el.git
+[submodule "markdown-mode"]
+    path = lisp/extensions/markdown-mode
+    url = https://github.com/jrblevin/markdown-mode.git
+[submodule "eldoc-extension"]
+    path = lisp/extensions/eldoc-extension
+    url = https://github.com/emacsmirror/eldoc-extension.git
+[submodule "ace-window"]
+    path = lisp/extensions/ace-window
+    url = https://github.com/abo-abo/ace-window.git
+[submodule "auto-save"]
+    path = lisp/extensions/auto-save
+    url = https://github.com/manateelazycat/auto-save.git
+[submodule "avy"]
+    path = lisp/extensions/avy
+    url = https://github.com/abo-abo/avy.git
+[submodule "compat"]
+    path = lisp/extensions/compat
+    url = https://github.com/emacs-compat/compat.git
+[submodule "awesome-tray"]
+    path = lisp/extensions/awesome-tray
+    url = https://github.com/manateelazycat/awesome-tray.git
+[submodule "sort-tab"]
+    path = lisp/extensions/sort-tab
+    url = https://github.com/manateelazycat/sort-tab.git
+[submodule "dired-hacks"]
+    path = lisp/extensions/dired-hacks
+    url = https://github.com/Fuco1/dired-hacks.git
+[submodule "dired-sidebar"]
+    path = lisp/extensions/dired-sidebar
+    url = https://github.com/jojojames/dired-sidebar.git
+[submodule "projectile"]
+    path = lisp/extensions/projectile
+    url = https://github.com/bbatsov/projectile.git
+[submodule "emacs-dashboard"]
+    path = lisp/extensions/emacs-dashboard
+    url = https://github.com/emacs-dashboard/emacs-dashboard.git
+[submodule "ws-butler"]
+    path = lisp/extensions/ws-butler
+    url = https://github.com/lewang/ws-butler.git
+[submodule "dash.el"]
+    path = lisp/extensions/dash.el
+    url = https://github.com/magnars/dash.el.git
+[submodule "vscode-icon-emacs"]
+    path = lisp/extensions/vscode-icon-emacs
+    url = https://github.com/jojojames/vscode-icon-emacs.git

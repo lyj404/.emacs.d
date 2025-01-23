@@ -37,6 +37,10 @@
 ;; 设置Python环境
 (setq lsp-bridge-python-command (expand-file-name python-interpreter-path))
 
+;; 设置使用数字键快速选择候选词
+(setq acm-enable-quick-access t)
+(setq acm-quick-access-use-number-select t)
+
 ;; 日志开关
 ;;(setq lsp-bridge-enable-log t)
 
