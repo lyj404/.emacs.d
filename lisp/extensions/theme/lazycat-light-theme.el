@@ -1,6 +1,6 @@
-;;; lazycat-dark-theme.el --- My dark theme, for night use.
+;;; lazycat-light-theme.el --- My dark theme, for night use.
 
-;; Filename: lazycat-dark-theme.el
+;; Filename: lazycat-light-theme.el
 ;; Description: My dark theme, for night use.
 ;; Author: Andy Stewart <lazycat.manatee@gmail.com>
 ;; Maintainer: Andy Stewart <lazycat.manatee@gmail.com>
@@ -9,7 +9,7 @@
 ;; Version: 0.1
 ;; Last-Updated: 2020-03-21 15:00:25
 ;;           By: Andy Stewart
-;; URL: http://www.emacswiki.org/emacs/download/lazycat-dark-theme.el
+;; URL: http://www.emacswiki.org/emacs/download/lazycat-light-theme.el
 ;; Keywords:
 ;; Compatibility: GNU Emacs 26.3
 ;;
@@ -44,14 +44,14 @@
 
 ;;; Installation:
 ;;
-;; Put lazycat-dark-theme.el to your load-path.
+;; Put lazycat-light-theme.el to your load-path.
 ;; The load-path is usually ~/elisp/.
 ;; It's set in your ~/.emacs like this:
 ;; (add-to-list 'load-path (expand-file-name "~/elisp"))
 ;;
 ;; And the following to your ~/.emacs startup file.
 ;;
-;; (require 'lazycat-dark-theme)
+;; (require 'lazycat-light-theme)
 ;;
 ;; No need more.
 
@@ -60,7 +60,7 @@
 ;;
 ;;
 ;; All of the above can customize by:
-;;      M-x customize-group RET lazycat-dark-theme RET
+;;      M-x customize-group RET lazycat-light-theme RET
 ;;
 
 ;;; Change log:
@@ -86,50 +86,50 @@
 
 (require 'lazycat-theme)
 
-(defgroup lazycat-dark-theme nil
+(defgroup lazycat-light-theme nil
   "Options for lazycat-themes"
   :group 'lazycat-themes)
 
-(defcustom lazycat-dark-brighter-modeline nil
+(defcustom lazycat-light-brighter-modeline nil
   "If non-nil, more vivid colors will be used to style the mode-line."
-  :group 'lazycat-dark-theme
+  :group 'lazycat-light-theme
   :type 'boolean)
 
-(defcustom lazycat-dark-brighter-comments nil
+(defcustom lazycat-light-brighter-comments nil
   "If non-nil, comments will be highlighted in more vivid colors."
-  :group 'lazycat-dark-theme
+  :group 'lazycat-light-theme
   :type 'boolean)
 
-(defcustom lazycat-dark-comment-bg lazycat-dark-brighter-comments
+(defcustom lazycat-light-comment-bg lazycat-light-brighter-comments
   "If non-nil, comments will have a subtle, darker background. Enhancing their
 legibility."
-  :group 'lazycat-dark-theme
+  :group 'lazycat-light-theme
   :type 'boolean)
 
-(defcustom lazycat-dark-padded-modeline lazycat-themes-padded-modeline
+(defcustom lazycat-light-padded-modeline lazycat-themes-padded-modeline
   "If non-nil, adds a 4px padding to the mode-line. Can be an integer to
 determine the exact padding."
-  :group 'lazycat-dark-theme
+  :group 'lazycat-light-theme
   :type '(choice integer boolean))
 
 ;;
-(def-lazycat-theme lazycat-dark
+(def-lazycat-theme lazycat-light
   "A dark theme inspired by Atom One Dark"
 
   ;; name        default   256       16
-  ((bg         '("#242525" nil       nil            ))
-   (bg-alt     '("#333333" nil       nil            ))
+  ((bg         '("#FAFAFA" nil       nil            ))
+   (bg-alt     '("#C3E8FF" nil       nil            ))
    (base0      '("#1B2229" "black"   "black"        ))
    (base1      '("#1c1f24" "#1e1e1e" "brightblack"  ))
    (base2      '("#202328" "#2e2e2e" "brightblack"  ))
-   (base3      '("#23272e" "#262626" "brightblack"  ))
+   (base3      '("#EAEAEA" "#262626" "brightblack"  ))
    (base4      '("#3f444a" "#3f3f3f" "brightblack"  ))
    (base5      '("#5B6268" "#525252" "brightblack"  ))
    (base6      '("#73797e" "#6b6b6b" "brightblack"  ))
    (base7      '("#9ca0a4" "#979797" "brightblack"  ))
    (base8      '("#DFDFDF" "#dfdfdf" "white"        ))
-   (fg         '("#00CE00" "#bfbfbf" "brightwhite"  ))
-   (fg-alt     '("green4" "#2d2d2d" "white"        ))
+   (fg         '("#383a42" "#bfbfbf" "brightwhite"  ))
+   (fg-alt     '("#c6c7c7" "#2d2d2d" "white"        ))
 
    (grey       base4)
    (red        '("#ff6c6b" "#ff6655" "red"          ))
@@ -145,23 +145,23 @@ determine the exact padding."
    (dark-cyan  '("#5699AF" "#5699AF" "cyan"         ))
 
    ;; face categories -- required for all themes
-   (highlight      "green")
-   (vertical-bar   (lazycat-darken base1 0.1))
-   (selection      dark-blue)
-   (builtin        "#00b8ff")
-   (comments       "#a7a7a7")
-   (doc-comments   "#aaaaaa")
-   (constants      "#bd00ff")
-   (functions      "gold2")
-   (keywords       "#004FFF")
+   (highlight      blue)
+   (vertical-bar   (lazycat-darken base2 0.1))
+   (selection      "#CCCCCC")
+   (builtin        dark-blue)
+   (comments       (if lazycat-light-brighter-comments cyan base4))
+   (doc-comments   (lazycat-darken comments 0.15))
+   (constants      "#008080")
+   (functions      "#0C0CA9")
+   (keywords       "#A91B0C")
    (methods        cyan)
-   (operators      "cyan3")
-   (type           "#00b8ff")
-   (strings        "#DFD67A")
-   (variables      "gold2")
+   (operators      blue)
+   (type           "#A90C6C")
+   (strings        "#0CA921")
+   (variables      (lazycat-darken magenta 0.36))
    (numbers        orange)
    (region         "#3F90F7")
-   (region-fg      "#FFF")
+   (region-fg      "#000")
    (error          red)
    (warning        yellow)
    (success        green)
@@ -171,23 +171,23 @@ determine the exact padding."
 
    ;; custom categories
    (hidden     `(,(car bg) "black" "black"))
-   (-modeline-bright lazycat-dark-brighter-modeline)
+   (-modeline-bright lazycat-light-brighter-modeline)
    (-modeline-pad
-    (when lazycat-dark-padded-modeline
-      (if (integerp lazycat-dark-padded-modeline) lazycat-dark-padded-modeline 4)))
+    (when lazycat-light-padded-modeline
+      (if (integerp lazycat-light-padded-modeline) lazycat-light-padded-modeline 4)))
 
    (modeline-fg     fg)
    (modeline-fg-alt base5)
 
    (modeline-bg
     (if -modeline-bright
-        (lazycat-darken blue 0.475)
-      `(,(lazycat-darken (car bg-alt) 0.15) ,@(cdr base0))))
+        (lazycat-lighten blue 0.475)
+      `(,(lazycat-lighten (car bg-alt) 0.15) ,@(cdr base0))))
    (modeline-bg-l
     (if -modeline-bright
-        (lazycat-darken blue 0.45)
-      `(,(lazycat-darken (car bg-alt) 0.1) ,@(cdr base0))))
-   (modeline-bg-inactive   `(,(lazycat-darken (car bg-alt) 0.1) ,@(cdr bg-alt)))
+        (lazycat-lighten blue 0.45)
+      `(,(lazycat-lighten (car bg-alt) 0.1) ,@(cdr base0))))
+   (modeline-bg-inactive   `(,(lazycat-lighten (car bg-alt) 0.1) ,@(cdr bg-alt)))
    (modeline-bg-inactive-l `(,(car bg-alt) ,@(cdr base1))))
 
 
@@ -201,7 +201,7 @@ determine the exact padding."
 
    (font-lock-comment-face
     :foreground comments
-    :background (if lazycat-dark-comment-bg (lazycat-lighten bg 0.05)))
+    :background (if lazycat-light-comment-bg (lazycat-lighten bg 0.05)))
    (font-lock-doc-face
     :inherit 'font-lock-comment-face
     :foreground doc-comments)
@@ -250,13 +250,12 @@ determine the exact padding."
    (solaire-org-hide-face :foreground hidden)
 
    ;; secondary region.
-   (secondary-selection :background grey)
+   (secondary-selection :background yellow)
    )
-
 
   ;; --- extra variables ---------------------
   ())
 
-(provide 'lazycat-dark-theme)
+(provide 'lazycat-light-theme)
 
-;;; lazycat-dark-theme.el ends here
+;;; lazycat-light-theme.el ends here

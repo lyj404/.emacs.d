@@ -17,13 +17,17 @@
 (setq-default cursor-type 'bar)
 ;; 光标和字符宽度一致（如 TAB)。
 (setq x-stretch-cursor t)
+;; 设置字体和大小
+(set-face-attribute 'default nil :font "JetBrainsMono NF-14")
+;; 设置字体缩放比例
+(setq face-font-rescale-alist '(("JetBrainsMono NF" . 1.0)))
 ;; 关闭启动空白buffer
 (setq initial-scratch-message "")
 
 ;; 启用ido-mode，ido-mode 会增强 Emacs 的文件和缓冲区选择功能
 (ido-mode 1)
 ;; 括号补全
-;; (electric-pair-mode 1)
+(electric-pair-mode 1)
 ;; 高亮当前行
 (global-hl-line-mode 1)
 ;; 在 Window 显示行号
