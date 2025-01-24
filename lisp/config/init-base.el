@@ -23,7 +23,7 @@
 ;; 启用ido-mode，ido-mode 会增强 Emacs 的文件和缓冲区选择功能
 (ido-mode 1)
 ;; 括号补全
-(electric-pair-mode 1)
+;; (electric-pair-mode 1)
 ;; 高亮当前行
 (global-hl-line-mode 1)
 ;; 在 Window 显示行号
