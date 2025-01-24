@@ -34,9 +34,9 @@
 [submodule "/home/lyj/.emacs.d/lisp/extensions/blink-search"]
 	path = /home/lyj/.emacs.d/lisp/extensions/blink-search
 	url = git@github.com:manateelazycat/blink-search.git
-[submodule "/home/lyj/.emacs.d/lisp/extensions/languages/markdown-mode"]
-	path = /home/lyj/.emacs.d/lisp/extensions/languages/markdown-mode
-	url = https://github.com/jrblevin/markdown-mode.git
-[submodule "/home/lyj/.emacs.d/lisp/extensions/languages/go-mode"]
-	path = /home/lyj/.emacs.d/lisp/extensions/languages/go-mode
+[submodule "/home/lyj/.emacs.d/lisp/extensions/go-mode"]
+	path = /home/lyj/.emacs.d/lisp/extensions/go-mode
 	url = https://github.com/dominikh/go-mode.el.git
+[submodule "/home/lyj/.emacs.d/lisp/extensions/markdown-mode"]
+	path = /home/lyj/.emacs.d/lisp/extensions/markdown-mode
+	url = https://github.com/jrblevin/markdown-mode.git
