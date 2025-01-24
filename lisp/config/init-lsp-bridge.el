@@ -25,7 +25,7 @@
 ;; 启用 lsp 工作区符号自动完成
 (setq acm-enable-lsp-workspace-symbol t)
 
-;; 启用行内提示（如类型信息显示）
+ ;; 启用行内提示（如类型信息显示）
 (setq lsp-bridge-enable-inlay-hint t)
 
 ;; 启用语义标记
@@ -33,9 +33,6 @@
 
 ;; 设置忽略语义标记的修饰符类型限制，默认忽略变量
 (setq-default lsp-bridge-semantic-tokens-ignore-modifier-limit-types ["variable"])
-
-;; 设置Python环境
-(setq lsp-bridge-python-command (expand-file-name python-interpreter-path))
 
 ;; 设置使用数字键快速选择候选词
 (setq acm-enable-quick-access t)

@@ -17,11 +17,13 @@
 (setq-default cursor-type 'bar)
 ;; 光标和字符宽度一致（如 TAB)。
 (setq x-stretch-cursor t)
+;; 关闭启动空白buffer
+(setq initial-scratch-message "")
 
-;; 自动补全括号
-(electric-pair-mode t)
 ;; 启用ido-mode，ido-mode 会增强 Emacs 的文件和缓冲区选择功能
 (ido-mode 1)
+;; 括号补全
+(electric-pair-mode 1)
 ;; 高亮当前行
 (global-hl-line-mode 1)
 ;; 在 Window 显示行号
@@ -39,11 +41,5 @@
 (add-hook 'prog-mode-hook #'show-paren-mode)
 ;; 编程模式下，可以折叠代码块
 (add-hook 'prog-mode-hook #'hs-minor-mode)
-
-; 设定启动图形界面时的初始 Frame 宽度（字符数）
-;;(add-to-list 'default-frame-alist '(width . 130)) 
-;; 设定启动图形界面时的初始 Frame 高度（字符数）
-;;(add-to-list 'default-frame-alist '(height . 35)) 
-
 
 (provide 'init-base)

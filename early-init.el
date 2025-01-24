@@ -38,10 +38,8 @@
       (gc-cons-threshold most-positive-fixnum)
       ;; Empty to avoid analyzing files when loading remote files.
       (file-name-handler-alist nil))
-
-    ;; Emacs configuration file content is written below.
-
 )
+
 ;; doom core.el中提升IO性能的操作
 ;; 禁用进程的自适应读取缓冲
 (setq process-adaptive-read-buffering nil)
