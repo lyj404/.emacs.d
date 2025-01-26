@@ -9,7 +9,6 @@
    (require 'init-auto-save)
    (require 'init-keymap)
    (require 'init-base)
-   (require 'init-projectile)
    (require 'init-mode)
 
    ;; 延后加载
