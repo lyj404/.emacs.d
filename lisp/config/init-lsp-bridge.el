@@ -34,7 +34,6 @@
 ;; 设置忽略语义标记的修饰符类型限制，默认忽略变量
 (setq-default lsp-bridge-semantic-tokens-ignore-modifier-limit-types ["variable"])
 
-
 ;; 启用快速选择（使用alt+数字）
 (setq acm-enable-quick-access t)
 
