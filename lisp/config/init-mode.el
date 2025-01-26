@@ -19,7 +19,7 @@ The test for presence of the car of ELT-CONS is done with `equal'."
 
 
 
-;;; Mode load.
+;; load mode
 (autoload 'go-mode "init-golang")
 (autoload 'markdown-mode "init-markdown-mode")
 

@@ -22,3 +22,9 @@
 		(require 'init-eaf)
 		(require 'init-sort-tab)
 		)))
+
+;; 在Emacs启动之后加载eaf-file-manager
+(add-hook 'emacs-startup-hook
+          (lambda ()
+            (message "Emacs has started!")
+            (eaf-open-in-file-manager)))

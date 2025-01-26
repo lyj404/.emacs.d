@@ -72,17 +72,27 @@
    )
  "init-eaf")
 
-;; ### lsp-bridge ###
-;;; --- 代码语法补全
+;; lsp-bridge快捷键
 (lazy-load-global-keys
  '(
    ("C-1" . lsp-bridge-find-def) ; 跳转到定义位置
    ("C-2" . lsp-bridge-find-def-return) ; 返回跳转之前的位置
    ("C-3" . lsp-bridge-code-action) ; 弹出代码修复菜单
-   ("C-4" . lsp-bridge-popup-documentation) ; 查看光标处文档
+   ("C-&" . lsp-bridge-popup-documentation) ; 查看光标处文档
+   ("C-*"   . lsp-bridge-indent-left)                     ;向左缩进
+   ("C-<right>"   . lsp-bridge-indent-right)                    ;向右缩进
    ("M-s-j" . lsp-bridge-diagnostic-jump-next) ;显示下一个错误
    ("M-s-k" . lsp-bridge-diagnostic-jump-prev) ;显示上一个错误
    )
  "init-lsp-bridge")
+
+;; popper快捷键
+(lazy-load-global-keys
+ '(
+   ("C-`" . popper-toggle-latest)
+   ("M-`" . popper-cycle)
+   ("C-M-`" . popper-toggle-type)
+   )
+ "init-popper")
 
 (provide 'init-keymap)
