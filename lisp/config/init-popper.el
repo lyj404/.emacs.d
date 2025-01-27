@@ -1,12 +1,5 @@
 (require 'popper)
 
-;; 弹出一个窗口并打开终端
-(defun popper-toggle-and-open-terminal ()
-  "Toggle popper and always open EAF terminal."
-  (interactive)
-  (popper-toggle-latest)
-  (eaf-open-terminal))
-
 ;; 将相关buffer指定弹出窗口
 (setq popper-reference-buffers
       '("\\*Messages\\*"           ;; 匹配 *Messages* 缓冲区

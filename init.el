@@ -16,7 +16,7 @@
 	1 nil
 	#'(lambda ()
 		(require 'init-treesit)
-		(require 'init-eldoc)
+		;; (require 'init-eldoc)
 		(require 'init-yasnippet)
 		(require 'init-markdown-mode)
 		(require 'init-eaf)
