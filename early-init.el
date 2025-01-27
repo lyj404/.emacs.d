@@ -53,6 +53,16 @@
 ;; 禁用启动消息
 (setq inhibit-startup-message t)
 
+;; 让窗口启动更平滑
+(setq frame-inhibit-implied-resize t)
+(setq-default inhibit-redisplay t
+              inhibit-message t)
+(add-hook 'window-setup-hook
+          (lambda ()
+            (setq-default inhibit-redisplay nil
+                          inhibit-message nil)
+            (redisplay)))
+
 ;; 关闭menu bar，toolbar scroll bar
 (setq default-frame-alist
       '((menu-bar-lines . 0)

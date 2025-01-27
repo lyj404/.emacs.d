@@ -13,4 +13,3 @@ git clone https://github.com/lyj404/.emacs.d.git
 ```
 git submodule update --init --recursive
 ```
-

@@ -1,37 +1,68 @@
 (require 'markdown-mode)
+(require 'markdown-ts-mode)
 
-;; 设置 markdown-ts-mode 的 Treesit 语法高亮规则
-(setq markdown-ts--treesit-settings
-      (treesit-font-lock-rules
-       ;; 针对 Markdown 内联元素的设置
-       :language 'markdown-inline
-       :override t
-       :feature 'delimiter
-       '([ "[" "]" "(" ")" ] @shadow)  ; 对于括号等分隔符使用 shadow 风格
+;; 检查Treesit是否安装markwodn语法规则
+(unless (treesit-ready-p 'markdown)
+  (treesit-install-language-grammar 'markdown))
 
-       ;; 针对 Markdown 主体文本的设置
-       :language 'markdown
-       :feature 'paragraph
-       '([((setext_heading) @font-lock-function-name-face)  ; Setext 标题使用函数名样式
-          ((atx_heading) @font-lock-function-name-face)     ; ATX 标题同样使用函数名样式
-          ((thematic_break) @shadow)                        ; 主题分隔线使用 shadow 风格
-          ((indented_code_block) @font-lock-comment-face)   ; 缩进代码块使用注释样式
-          (list_item (list_marker_star) @font-lock-constant-face)  ; 列表项使用常量样式
-          (fenced_code_block (fenced_code_block_delimiter) @font-lock-doc-face)  ; 围栏代码块分隔符使用文档样式
-          (block_quote (paragraph) @font-lock-comment-face)  ; 引用块中的段落使用注释样式
-          ])
+;; 配置markdown语法高亮规则
+(with-eval-after-load 'markdown-ts-mode
+  ;; = 块级元素配置 =
+  (defvar my/markdown-block-rules
+    (treesit-font-lock-rules
+     :language 'markdown
+     :override t
+     :feature 'blocks
+     '(;; 标题样式
+       [(atx_heading (atx_h1_marker) @font-lock-preprocessor-face)
+        (atx_heading (atx_h2_marker) @font-lock-keyword-face)
+        (setext_heading) @font-lock-function-name-face
 
-       ;; 针对 Markdown 内联段落的设置
-       :language 'markdown-inline
-       :feature 'paragraph-inline
-       '([
-          ((image_description) @link)  ; 图片描述使用链接样式
-          ((link_destination) @font-lock-comment-face)  ; 链接目标使用注释样式
-          ((code_span) @font-lock-comment-face)  ; 代码段使用注释样式
-          ((emphasis) @underline)  ; 强调文本使用下划线
-          ((strong_emphasis) @bold)  ; 强烈强调文本使用粗体
-          (inline_link (link_text) @link)  ; 内联链接的文本部分使用链接样式
-          ])))
+        ;; 代码块
+        (fenced_code_block (fenced_code_block_delimiter) @font-lock-doc-face)
+        (indented_code_block) @font-lock-comment-face
 
-;; 提供 init-markdown-mode 模块，使其可以被其他 Emacs 配置文件引用
+        ;; 其他块元素
+        (thematic_break) @shadow
+        (block_quote (block_quote_marker) @font-lock-comment-face)])))
+
+  ;; = 内联元素配置 =
+  (defvar my/markdown-inline-rules
+    (treesit-font-lock-rules
+     :language 'markdown-inline
+     :override t
+     :feature 'inlines
+     '(;; 强调样式
+       [(emphasis) @italic
+        (strong_emphasis) @bold
+        (strikethrough) @shadow
+
+        ;; 链接与图片
+        (link_destination) @font-lock-comment-face
+        (image_description) @link
+        (inline_link (link_text) @link)])))
+
+  ;; = 特征管理 =
+  (setq markdown-ts--treesit-settings
+        (append my/markdown-block-rules
+                my/markdown-inline-rules))
+
+  ;; = 应用特征层级 =
+  (setq-local treesit-font-lock-feature-list
+              '((blocks inlines)    ; 核心特征
+                (comment)           ; 次要特征
+                (error)))           ; 错误提示
+
+  ;; = Face 映射优化 =
+  (face-remap-add-relative 'italic :slant 'italic)
+  (face-remap-add-relative 'bold   :weight 'bold))
+
+;; markdown相关快捷键
+(lazy-load-set-keys
+ '(
+   ("TAB" . markdown-cycle)
+   ("C-c C-c" . eaf-markdown-previewer-open)
+   )
+ markdown-ts-mode-map)
+
 (provide 'init-markdown-mode)

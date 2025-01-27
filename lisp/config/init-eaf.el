@@ -1,7 +1,7 @@
 (require 'eaf)
-(require 'eaf-markdown-previewer)
 (require 'eaf-file-manager)
 (require 'eaf-pyqterminal)
+(require 'eaf-markdown-previewer)
 
 ;; 终端快捷键
 ;; 向上滚动

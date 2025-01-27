@@ -10,6 +10,7 @@
    (require 'init-keymap)
    (require 'init-base)
    (require 'init-mode)
+   (require 'init-one-key)
 
    ;; 延后加载
    (run-with-idle-timer

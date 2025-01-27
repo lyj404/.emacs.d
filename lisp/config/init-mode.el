@@ -14,6 +14,8 @@ The test for presence of the car of ELT-CONS is done with `equal'."
 ;; 遍历文件模式列表，将文件扩展名与 Emacs 编辑模式关联
 (dolist (elt-cons '(
                     ("\\.go$" . go-mode)
+					("\\.markdown" . markdown-mode)
+                    ("\\.md" . markdown-mode)
                     ))
   (add-to-alist 'auto-mode-alist elt-cons))
 

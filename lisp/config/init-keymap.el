@@ -65,7 +65,7 @@
 (lazy-load-global-keys
  '(
    ("<f8>" . eaf-open-in-file-manager)
-   ("s-'" . eaf-open)
+   ("s-'" . eaf-open) ; 打开某个eaf的app
    ("s-n" . eaf-open-terminal)
    ("s-6" . eaf-record-log)
    ("s-7" . eaf-stop-process)
@@ -78,11 +78,13 @@
    ("C-1" . lsp-bridge-find-def) ; 跳转到定义位置
    ("C-2" . lsp-bridge-find-def-return) ; 返回跳转之前的位置
    ("C-3" . lsp-bridge-code-action) ; 弹出代码修复菜单
-   ("C-&" . lsp-bridge-popup-documentation) ; 查看光标处文档
-   ("C-*"   . lsp-bridge-indent-left)                     ;向左缩进
-   ("C-<right>"   . lsp-bridge-indent-right)                    ;向右缩进
+   ("C-4" . lsp-bridge-popup-documentation) ; 查看光标处文档
+   ("C-&"   . lsp-bridge-indent-left)                     ;向左缩进
+   ("C-*"   . lsp-bridge-indent-right)                    ;向右缩进
    ("M-s-j" . lsp-bridge-diagnostic-jump-next) ;显示下一个错误
    ("M-s-k" . lsp-bridge-diagnostic-jump-prev) ;显示上一个错误
+   ("M-s-n" . lsp-bridge-popup-documentation-scroll-up) ;向下滚动文档
+   ("M-s-p" . lsp-bridge-popup-documentation-scroll-down) ;向上滚动文档
    )
  "init-lsp-bridge")
 
@@ -94,5 +96,11 @@
    ("C-M-`" . popper-toggle-type)
    )
  "init-popper")
+
+;; one-key创建的菜单对应的快捷键
+(lazy-load-set-keys
+ '(
+   ("C-c o" . one-key-menu-directory) ; 打开目录菜单
+   ))
 
 (provide 'init-keymap)

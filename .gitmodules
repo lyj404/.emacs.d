@@ -28,7 +28,7 @@
 [submodule "ws-butler"]
     path = lisp/extensions/ws-butler
     url = https://github.com/lewang/ws-butler.git
-[submodule "lisp/extensions/emacs-application-framework"]
+[submodule "emacs-application-framework"]
 	path = lisp/extensions/emacs-application-framework
 	url = https://github.com/emacs-eaf/emacs-application-framework.git
 [submodule "blink-search"]
@@ -46,3 +46,6 @@
 [submodule "popper"]
 	path = lisp/extensions/popper
 	url = https://github.com/karthink/popper.git
+[submodule "one-key"]
+	path = lisp/extensions/one-key
+	url = https://github.com/manateelazycat/one-key.git
