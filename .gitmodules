@@ -49,3 +49,6 @@
 [submodule "one-key"]
 	path = lisp/extensions/one-key
 	url = https://github.com/manateelazycat/one-key.git
+[submodule "markdown-ts-mode"]
+	path = lisp/extensions/markdown-ts-mode
+	url = https://github.com/LionyxML/markdown-ts-mode.git

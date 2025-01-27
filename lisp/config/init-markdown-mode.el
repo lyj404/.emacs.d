@@ -60,8 +60,7 @@
 ;; markdown相关快捷键
 (lazy-load-set-keys
  '(
-   ("TAB" . markdown-cycle)
-   ("C-c C-c" . eaf-markdown-previewer-open)
+   ("TAB" . markdown-cycle) ; 折叠当前标题下所有子标题
    )
  markdown-ts-mode-map)
 

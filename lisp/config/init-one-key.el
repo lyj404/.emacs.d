@@ -8,6 +8,7 @@
  '(
    (("h" . "Home") . (lambda () (interactive) (eaf-open-in-file-manager "~/")))
    (("p" . "Project") . (lambda () (interactive) (eaf-open-in-file-manager "~/Projects")))
+   (("c" . "Config") . (lambda () (interactive) (eaf-open-in-file-manager "~/.emacs.d/lisp/config")))
    )
  t)
 
