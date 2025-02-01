@@ -9,9 +9,6 @@
 ;; 设置自动完成模式以触发关键词匹配 yasnippet
 (setq acm-backend-yas-match-by-trigger-keyword t)
 
-;; 将markdown的语言服务器设置为marksman
-(setq lsp-bridge-markdown-lsp-server "marksman")
-
  ;; 类型嵌入提示
 (setq lsp-bridge-enable-inlay-hint t)
 
