@@ -55,3 +55,6 @@
 [submodule "vundo"]
 	path = lisp/extensions/vundo
 	url = https://github.com/casouri/vundo.git
+[submodule "fingertip"]
+	path = lisp/extensions/fingertip
+	url = https://github.com/manateelazycat/fingertip.git

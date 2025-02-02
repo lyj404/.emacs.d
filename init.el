@@ -4,6 +4,7 @@
 (with-temp-message ""
    (require 'lazy-load)
    (require 'one-key)
+   (require 'fingertip)
    
    (require 'init-theme)
    (require 'init-awesome-tray)
@@ -12,6 +13,7 @@
    (require 'init-keymap)
    (require 'init-base)
    (require 'init-mode)
+   (require 'init-fingertip)
    (require 'init-one-key)
 
    ;; 延后加载

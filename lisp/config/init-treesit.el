@@ -30,8 +30,15 @@
         (vue . ("https://github.com/merico-dev/tree-sitter-vue"))
         (yaml . ("https://github.com/ikatyang/tree-sitter-yaml"))))
 
+;; 将对应编程语言的mode映射为对应的Tree-sitter模式
+(setq major-mode-remap-alist
+      '((markdown-mode   . markdown-ts-mode)
+        ))
+
 ;; 在进入对应模式或文件时创建解析器
 (add-hook 'markdown-ts-mode-hook #'(lambda () (treesit-parser-create 'markdown)))
 (add-hook 'go-mode-hook #'(lambda () (treesit-parser-create 'go)))
+(add-hook 'emacs-lisp-mode-hook #'(lambda () (treesit-parser-create 'elisp)))
+(add-hook 'ielm-mode-hook #'(lambda () (treesit-parser-create 'elisp)))
 
 (provide 'init-treesit)
