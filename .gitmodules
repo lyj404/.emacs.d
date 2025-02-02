@@ -52,3 +52,6 @@
 [submodule "markdown-ts-mode"]
 	path = lisp/extensions/markdown-ts-mode
 	url = https://github.com/LionyxML/markdown-ts-mode.git
+[submodule "vundo"]
+	path = lisp/extensions/vundo
+	url = https://github.com/casouri/vundo.git

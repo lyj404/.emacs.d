@@ -103,4 +103,12 @@
    ("C-c o" . one-key-menu-directory) ; 打开目录菜单
    ))
 
+;; vundo快捷键
+(lazy-load-global-keys
+ '(
+   ("C-/" . undo)  ; 执行撤销操作
+   ("C-?" . vundo) ; 启动 vundo 界面
+   )
+ "init-vundo")
+
 (provide 'init-keymap)

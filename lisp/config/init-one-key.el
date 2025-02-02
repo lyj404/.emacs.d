@@ -1,4 +1,3 @@
-(require 'one-key)
 (require 'eaf)
 (require 'eaf-file-manager)
 

@@ -9,7 +9,7 @@
 ;; 设置自动完成模式以触发关键词匹配 yasnippet
 (setq acm-backend-yas-match-by-trigger-keyword t)
 
- ;; 类型嵌入提示
+;; 类型嵌入提示
 (setq lsp-bridge-enable-inlay-hint t)
 
 ;; 启用语义符号高亮
@@ -20,6 +20,9 @@
 
 ;; 启用快速选择（使用alt+数字）
 (setq acm-enable-quick-access t)
+
+;; 设置 Markdown 的 LSP 服务器为 marksman
+(setq lsp-bridge-markdown-lsp-server "marksman")
 
 ;; 日志开关
 ;;(setq lsp-bridge-enable-log t)
