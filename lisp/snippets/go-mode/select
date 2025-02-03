@@ -1,5 +1,5 @@
 # -*- mode: snippet -*-
-# name: select
+# name: select statement
 # key: sel
 # --
 select {

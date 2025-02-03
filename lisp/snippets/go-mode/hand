@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: http handler declaration
+# key: hand
+# --
+func $1($2 http.ResponseWriter, $3 *http.Request) {
+  $0
+}

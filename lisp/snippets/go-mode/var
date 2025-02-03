@@ -1,6 +1,5 @@
 # -*- mode: snippet -*-
-# name: var
+# name: single variable
 # key: var
 # --
-var ${1:name} ${2:type}
-$0
+var $1 $2

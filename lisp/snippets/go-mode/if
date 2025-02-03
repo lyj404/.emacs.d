@@ -1,5 +1,5 @@
 # -*- mode: snippet -*-
-# name: if
+# name: if statement
 # key: if
 # --
 if $1 {

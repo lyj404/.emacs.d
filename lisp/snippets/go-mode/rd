@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: http.Redirect
+# key: rd
+# --
+http.Redirect($1, $2, "$3", $4)

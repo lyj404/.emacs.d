@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: goroutine function
+# key: gf
+# --
+go $1($0)

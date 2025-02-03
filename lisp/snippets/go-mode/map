@@ -1,5 +1,5 @@
 # -*- mode: snippet -*-
-# name: map
+# name: map declaration
 # key: map
 # --
-map[${1:type}]${2:type}
+map[$1]$2

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: goroutine anonymous function
+# key: go
+# --
+go func($1) {
+  $0
+}($2)

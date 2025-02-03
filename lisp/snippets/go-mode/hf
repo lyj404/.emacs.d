@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: http.HandleFunc
+# key: hf
+# --
+$1.HandleFunc("$2", $3)

@@ -1,8 +1,7 @@
 # -*- mode: snippet -*-
-# name: test
-# key: at
-# contributor : @atotto
+# name: test function
+# key: tf
 # --
 func Test$1(t *testing.T) {
-	$0
+  $0
 }

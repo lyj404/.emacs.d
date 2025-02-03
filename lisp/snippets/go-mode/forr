@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: for range statement
+# key: forr
+# --
+for $1, $2 := range $3 {
+  $0
+}
