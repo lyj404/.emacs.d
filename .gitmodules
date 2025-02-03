@@ -58,3 +58,6 @@
 [submodule "fingertip"]
 	path = lisp/extensions/fingertip
 	url = https://github.com/manateelazycat/fingertip.git
+[submodule "yaml-mode"]
+	path = lisp/extensions/yaml-mode
+	url = https://github.com/yoshiki/yaml-mode.git

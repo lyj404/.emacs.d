@@ -16,6 +16,8 @@ The test for presence of the car of ELT-CONS is done with `equal'."
                     ("\\.go$" . go-mode)
 					("\\.markdown" . markdown-mode)
                     ("\\.md" . markdown-mode)
+					("\\.yml" . yaml-ts-mode)
+					("\\.yaml" . yaml-ts-mode)
                     ))
   (add-to-alist 'auto-mode-alist elt-cons))
 
@@ -24,6 +26,7 @@ The test for presence of the car of ELT-CONS is done with `equal'."
 ;; load mode
 (autoload 'go-mode "init-golang")
 (autoload 'markdown-mode "init-markdown-mode")
+(autoload 'yaml-mode "yaml-mode")
 
 ;; 自动换行，默认100列就换行
 (setq default-fill-column 100)

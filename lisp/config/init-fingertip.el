@@ -3,6 +3,7 @@
                'emacs-lisp-mode-hook
                'lisp-interaction-mode-hook
                'lisp-mode-hook
+			   'markdown-ts-mode-hook
                'go-mode-hook
                ))
   (add-hook hook #'(lambda () (fingertip-mode 1))))

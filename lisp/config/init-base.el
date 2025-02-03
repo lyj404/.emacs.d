@@ -39,6 +39,13 @@
 ;; 将yes和no简化成y和n
 (fset 'yes-or-no-p 'y-or-n-p)
 
+;; 禁用鼠标点击粘贴
+(setq  mouse-yank-at-point t)
+;; 禁用鼠标中键点击
+(global-unset-key (kbd "<mouse-2>")) 
+;; 禁用鼠标右键双击剪切
+(fset 'mouse-save-then-kill 'ignore)
+
 ;; 编程模式下，高亮对应的括号
 (add-hook 'prog-mode-hook #'show-paren-mode)
 ;; 编程模式下，可以折叠代码块
