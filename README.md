@@ -3,7 +3,6 @@
 * 安装Python3，并且提供相关Python的类库，安装命令：`pip3 install epc orjson sexpdata six setuptools paramiko rapidfuzz watchdog packaging requests --break-system-packages`
 * 安装LSP（语言服务器）：
   * `gopls`，安装命令：`go install golang.org/x/tools/gopls@latest`，安装`GO`语言的LSP需要先安装go开发语言环境，
-  * [marksman](https://github.com/artempyanykh/marksman/releases)，`marksman`需手动安装配置，
   * `yaml-language-server`，安装命令`npm install -g yaml-language-server`
 * 安装`fd`，安装命令：`sudo pacman -S fd`
 * 安装`ripgrep`，安装命令：`sudo pacman -S ripgrep`

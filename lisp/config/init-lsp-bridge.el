@@ -21,9 +21,6 @@
 ;; 启用快速选择（使用alt+数字）
 (setq acm-enable-quick-access t)
 
-;; 设置 Markdown 的 LSP 服务器为 marksman
-(setq lsp-bridge-markdown-lsp-server "marksman")
-
 ;; 日志开关
 ;;(setq lsp-bridge-enable-log t)
 
