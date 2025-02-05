@@ -88,15 +88,6 @@
    )
  "init-lsp-bridge")
 
-;; popper快捷键
-(lazy-load-global-keys
- '(
-   ("C-`" . popper-toggle-latest)
-   ("M-`" . popper-cycle)
-   ("C-M-`" . popper-toggle-type)
-   )
- "init-popper")
-
 ;; one-key创建的菜单对应的快捷键
 (lazy-load-set-keys
  '(

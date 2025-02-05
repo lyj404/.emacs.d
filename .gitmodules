@@ -43,9 +43,6 @@
 [submodule "markdown-mode"]
 	path = lisp/extensions/markdown-mode
 	url = https://github.com/jrblevin/markdown-mode.git
-[submodule "popper"]
-	path = lisp/extensions/popper
-	url = https://github.com/karthink/popper.git
 [submodule "one-key"]
 	path = lisp/extensions/one-key
 	url = https://github.com/manateelazycat/one-key.git
