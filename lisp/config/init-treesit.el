@@ -45,7 +45,6 @@
 ;; 将对应编程语言的mode映射为对应的Tree-sitter模式
 (setq major-mode-remap-alist
       '((markdown-mode   . markdown-ts-mode)
-		(yaml-mode   . yaml-ts-mode)
         ))
 
 ;; 在进入对应模式或文件时创建解析器
@@ -53,6 +52,6 @@
 (add-hook 'go-mode-hook #'(lambda () (treesit-parser-create 'go)))
 (add-hook 'emacs-lisp-mode-hook #'(lambda () (treesit-parser-create 'elisp)))
 (add-hook 'ielm-mode-hook #'(lambda () (treesit-parser-create 'elisp)))
-(add-hook 'yaml-mode-hook #'(lambda () (treesit-parser-create 'yaml)))
+(add-hook 'yaml-ts-mode-hook #'(lambda () (treesit-parser-create 'yaml)))
 
 (provide 'init-treesit)

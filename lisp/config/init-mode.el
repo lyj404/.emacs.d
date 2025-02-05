@@ -24,7 +24,7 @@ The test for presence of the car of ELT-CONS is done with `equal'."
 ;; load mode
 (autoload 'go-mode "init-golang")
 (autoload 'markdown-mode "init-markdown-mode")
-(autoload 'yaml-mode "yaml-mode")
+(autoload 'yaml-ts-mode "yaml-ts-mode")
 
 ;; 自动换行，默认100列就换行
 (setq default-fill-column 100)

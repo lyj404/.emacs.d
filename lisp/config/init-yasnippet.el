@@ -17,13 +17,20 @@
                 (replace-regexp-in-string "\n$" "" (shell-command-to-string "git config --get user.email")))
 
               ;; 设置 yasnippet 的模板搜索路径为 ~/.emacs.d/lisp/snippets
-              ;; 使用 expand-file-name 确保路径正确展开用户的主目录
-              ;;(add-to-list 'yas/root-directory (expand-file-name "~/.emacs.d/lisp/snippets"))
 			  (setq yas-snippet-dirs '("~/.emacs.d/lisp/snippets"))
               ;; 重新加载所有 yasnippet 的模板
               (yas-reload-all)
               ;; 激活 yasnippet 模式
               (yas-minor-mode 1)))
+
+(add-hook 'yaml-mode-hook
+          (lambda ()
+            (yas-minor-mode 1)
+            (message "YASnippet activated in yaml-mode")
+            (message "YASnippet snippets: %s" (yas--get-snippet-tables))))
+
+(setq yas-debug t)
+
 
 ;; 提供 init-yasnippet 模块，使其可以被其他 Emacs 配置文件引用
 (provide 'init-yasnippet)

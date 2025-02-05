@@ -57,7 +57,4 @@
 	url = https://github.com/casouri/vundo.git
 [submodule "fingertip"]
 	path = lisp/extensions/fingertip
-	url = https://github.com/manateelazycat/fingertip.git
-[submodule "yaml-mode"]
-	path = lisp/extensions/yaml-mode
-	url = https://github.com/yoshiki/yaml-mode.git
+	url = https://github.com/manateelazycat/fingertip.gite
