@@ -1,36 +1,14 @@
-;; 在所有编程相关模式激活时执行以下操作
-(add-hook 'prog-mode-hook
-          #'(lambda ()
-              ;; 引入 yasnippet 模块
-              (require 'yasnippet)
+;; 加载yasnippet设置
+(defun my-yas-setup ()
+  (require 'yasnippet)
+  (setq yas-snippet-dirs '("~/.emacs.d/snippets"))
+  (yas-reload-all)
+  (yas-minor-mode 1))
 
-              ;; 定义一个函数，用于获取 Git 配置中的用户名
-              (defun get-git-user-name ()
-                (interactive)  ;; 使函数可以通过 M-x 调用
-                ;; 执行 git config 命令获取用户名，并去除结果字符串末尾的换行符
-                (replace-regexp-in-string "\n$" "" (shell-command-to-string "git config --get user.name")))
-
-              ;; 定义一个函数，用于获取 Git 配置中的用户邮箱
-              (defun get-git-user-email ()
-                (interactive)  ;; 使函数可以通过 M-x 调用
-                ;; 执行 git config 命令获取用户邮箱，并去除结果字符串末尾的换行符
-                (replace-regexp-in-string "\n$" "" (shell-command-to-string "git config --get user.email")))
-
-              ;; 设置 yasnippet 的模板搜索路径为 ~/.emacs.d/lisp/snippets
-			  (setq yas-snippet-dirs '("~/.emacs.d/lisp/snippets"))
-              ;; 重新加载所有 yasnippet 的模板
-              (yas-reload-all)
-              ;; 激活 yasnippet 模式
-              (yas-minor-mode 1)))
-
-(add-hook 'yaml-mode-hook
-          (lambda ()
-            (yas-minor-mode 1)
-            (message "YASnippet activated in yaml-mode")
-            (message "YASnippet snippets: %s" (yas--get-snippet-tables))))
-
-(setq yas-debug t)
+;; 在prog-mode-hook下激活yasnippet
+(add-hook 'prog-mode-hook 'my-yas-setup)
+;; 在yaml-ts-mode-hook下激活yasnippet
+(add-hook 'yaml-ts-mode-hook 'my-yas-setup)
 
 
-;; 提供 init-yasnippet 模块，使其可以被其他 Emacs 配置文件引用
 (provide 'init-yasnippet)
