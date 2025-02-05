@@ -2,5 +2,4 @@
 # name: list
 # key: list
 # --
-${1:key}:
-	- ${2:item1}
+${1:key}: [$2]
