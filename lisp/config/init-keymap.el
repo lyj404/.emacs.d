@@ -49,8 +49,11 @@
 ;; projectile快捷键
 (lazy-load-global-keys
  '(
-   ;; 绑定键，设置 "C-c p" 为 projectile 的命令映射快捷键
-   ("C-c p" . projectile-command-map)
+   ("C-c p a" . projectile-add-known-project) ; 将当前目录添加为已知项目
+   ("C-c p R" . projectile-rename-file) ; 重命名当前项目中的文件
+   ("C-c p p" . projectile-switch-project) ; 切换项目
+   ("C-c p f" . projectile-find-file) ; 在项目中查找文件
+   ("C-c p d" . projectile-find-dir) ; 查找当前项目中的目录
    )
  "init-projectile")
 

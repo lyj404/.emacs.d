@@ -28,6 +28,8 @@
 (ido-mode 1)
 ;; 高亮当前行
 (global-hl-line-mode 1)
+;; 设置高亮行的背景颜色
+(set-face-background 'hl-line "#323842")
 ;; 在 Window 显示行号
 (global-display-line-numbers-mode t)
 ;; 选中文本时输入将会替换选中的文本
