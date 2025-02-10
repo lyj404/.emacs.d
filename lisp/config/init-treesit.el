@@ -45,6 +45,7 @@
 ;; 将对应编程语言的mode映射为对应的Tree-sitter模式
 (setq major-mode-remap-alist
       '((markdown-mode   . markdown-ts-mode)
+		(python-mode . python-ts-mode)
         ))
 
 ;; 在进入对应模式或文件时创建解析器

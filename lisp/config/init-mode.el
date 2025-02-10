@@ -18,6 +18,7 @@ The test for presence of the car of ELT-CONS is done with `equal'."
                     ("\\.md" . markdown-mode)
 					("\\.yml" . yaml-ts-mode)
 					("\\.yaml" . yaml-ts-mode)
+					("\\.py$" . python-mode)
                     ))
   (add-to-alist 'auto-mode-alist elt-cons))
 
@@ -25,6 +26,7 @@ The test for presence of the car of ELT-CONS is done with `equal'."
 (autoload 'go-mode "init-golang")
 (autoload 'markdown-mode "init-markdown-mode")
 (autoload 'yaml-ts-mode "yaml-ts-mode")
+(autoload 'python-mode "init-python")
 
 ;; 自动换行，默认100列就换行
 (setq default-fill-column 100)
