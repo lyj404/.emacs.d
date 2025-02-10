@@ -23,6 +23,8 @@
 (setq face-font-rescale-alist '(("JetBrainsMono NF" . 1.0)))
 ;; 关闭启动空白buffer
 (setq initial-scratch-message "")
+;; 关闭启动界面
+(setq inhibit-startup-screen t)
 
 ;; 启用ido-mode，ido-mode 会增强 Emacs 的文件和缓冲区选择功能
 (ido-mode 1)

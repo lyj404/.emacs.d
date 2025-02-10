@@ -16,6 +16,7 @@
  '(
    ("s-a" . mark-whole-buffer) ; 全选
    ("C-c SPC" . comment-or-uncomment-region) ; 注释和取消注释
+   ("C-S k" . kill-whole-line) ; 删除光标所在行
    ))
 
 ;; ace-window快捷键
