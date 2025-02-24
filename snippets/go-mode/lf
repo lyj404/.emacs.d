@@ -1,5 +1,0 @@
-# -*- mode: snippet -*-
-# name: log.Printf
-# key: lf
-# --
-log.Printf("$1", $2)

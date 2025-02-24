@@ -1,5 +1,0 @@
-# -*- mode: snippet -*-
-# name: type function declaration
-# key: tyf
-# --
-type $1 func($2) $3

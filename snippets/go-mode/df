@@ -1,5 +1,0 @@
-# -*- mode: snippet -*-
-# name: defer statement
-# key: df
-# --
-defer $1($0)

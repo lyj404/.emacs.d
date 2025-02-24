@@ -1,5 +1,0 @@
-# -*- mode: snippet -*-
-# name: log.Println
-# key: lp
-# --
-log.Println("$1")

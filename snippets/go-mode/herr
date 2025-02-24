@@ -1,5 +1,0 @@
-# -*- mode: snippet -*-
-# name: http.Error
-# key: herr
-# --
-http.Error($1, $2.Error(), $3)

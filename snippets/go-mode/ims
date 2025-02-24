@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: multiple imports
-# key: ims
-# --
-import (
-  "$1"
-)

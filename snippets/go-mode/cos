@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: multiple constants
-# key: cos
-# --
-const (
-	  $1 = $2
-)

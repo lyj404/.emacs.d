@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: multiple variables
-# key: vars
-# --
-var (
-  $1 $2
-)

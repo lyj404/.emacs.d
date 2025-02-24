@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: init function
-# key: finit
-# --
-func init() {
-  $1
-}

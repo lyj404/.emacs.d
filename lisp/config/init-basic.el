@@ -18,7 +18,7 @@
 ;; 光标和字符宽度一致（如 TAB)。
 (setq x-stretch-cursor t)
 ;; 设置字体和大小
-(set-face-attribute 'default nil :font "JetBrainsMono NF-14")
+(set-face-attribute 'default nil :font "JetBrainsMono NF-12")
 ;; 设置字体缩放比例
 (setq face-font-rescale-alist '(("JetBrainsMono NF" . 1.0)))
 ;; 关闭启动空白buffer
@@ -30,8 +30,6 @@
 (ido-mode 1)
 ;; 高亮当前行
 (global-hl-line-mode 1)
-;; 设置高亮行的背景颜色
-(set-face-background 'hl-line "#323842")
 ;; 在 Window 显示行号
 (global-display-line-numbers-mode t)
 ;; 选中文本时输入将会替换选中的文本
@@ -50,9 +48,12 @@
 ;; 禁用鼠标右键双击剪切
 (fset 'mouse-save-then-kill 'ignore)
 
-;; 编程模式下，高亮对应的括号
-(add-hook 'prog-mode-hook #'show-paren-mode)
-;; 编程模式下，可以折叠代码块
-(add-hook 'prog-mode-hook #'hs-minor-mode)
+;; 全选快捷键
+(global-set-key (kbd "s-a") 'mark-whole-buffer)
+;; 保存快捷键
+(global-set-key (kbd "C-c s") 'save-buffer)
+;; 删除光标所在行
+(global-set-key (kbd "C-S-k") 'kill-whole-line)
 
-(provide 'init-base)
+
+(provide 'init-basic)

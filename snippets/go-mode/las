@@ -1,5 +1,0 @@
-# -*- mode: snippet -*-
-# name: http.ListenAndServe
-# key: las
-# --
-http.ListenAndServe("$1", $2)

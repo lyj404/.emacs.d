@@ -1,5 +1,0 @@
-# -*- mode: snippet -*-
-# name: log variable content
-# key: lv
-# --
-log.Printf("$1: %#+v\\n", $1)

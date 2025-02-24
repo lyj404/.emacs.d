@@ -1,9 +1,0 @@
-# -*- mode: snippet -*-
-# name: benchmark function
-# key: bf
-# --
-func Benchmark$1(b *testing.B) {
-  for $2 := 0; $2 < b.N; $2++ {
-    $0
-  }
-}
