@@ -4,5 +4,4 @@
 (with-temp-message ""  
   (require 'init-theme)
   (require 'init-basic)
-  (require 'init-auto-sudoedit)
 )
