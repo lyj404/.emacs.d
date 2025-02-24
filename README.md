@@ -11,9 +11,11 @@
 # 安装
 **下载源码：**
 ```
-git clone https://github.com/lyj404/.emacs.d.git
+git clone git@github.com:lyj404/.emacs.d.git
 ```
 **安装子模块依赖：**
+
+需要进入到`.emacs.d`目录下：
 ```
 git submodule update --init --recursive
 ```
