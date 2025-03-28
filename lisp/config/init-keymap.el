@@ -14,9 +14,10 @@
 ;; 设置全选和注释快捷键
 (lazy-load-set-keys
  '(
-   ("s-a" . mark-whole-buffer) ; 全选
+   ("C-c a" . mark-whole-buffer) ; 全选
    ("C-c SPC" . comment-or-uncomment-region) ; 注释和取消注释
    ("C-S k" . kill-whole-line) ; 删除光标所在行
+   ("C-c n" . copy-line-to-next-line) ; 复制当前行到下一行
    ))
 
 ;; ace-window快捷键
@@ -105,5 +106,14 @@
    ("C-?" . vundo) ; 启动 vundo 界面
    )
  "init-vundo")
+
+(defun copy-line-to-next-line ()
+  "Copy the current line to the next line, placing the cursor at the end of the new line."
+  (interactive)
+  (let ((current-line (thing-at-point 'line t)))
+    (end-of-line)       ; 移动到行尾
+    (newline)           ; 插入新行
+    (insert current-line) ; 插入当前行的内容
+    (end-of-line)))     ; 移动到新行的末尾
 
 (provide 'init-keymap)
